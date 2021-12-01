@@ -26,9 +26,8 @@ public class Day01 {
     private static void part1(List<String> records) {
         int previousDepth = 0;
         int counterDepth = 0;
+
         for (String record : records) {
-
-
             int currentDepth = Integer.parseInt(record);
             if (currentDepth > previousDepth) {
                 counterDepth++;
@@ -36,7 +35,7 @@ public class Day01 {
             previousDepth = currentDepth;
         }
 
-        System.out.println(counterDepth -1 );
+        System.out.println(counterDepth -1);
     }
 
     private static void part2(List<String> records) {
@@ -63,8 +62,8 @@ public class Day01 {
                 depthWindow.remove(0);
                 previousWindowSum = currentWindowSum;
             }
-
         }
+
         System.out.println(counterDepth -1 );
     }
 
