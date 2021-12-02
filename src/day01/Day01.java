@@ -17,8 +17,6 @@ public class Day01 {
 
     }
 
-
-
     private static void part1(List<String> records) {
         int previousDepth = 0;
         int counterDepth = 0;
