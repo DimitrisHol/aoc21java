@@ -3,25 +3,21 @@ package day01;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+
+import static utils.FileManager.parseFile;
 
 public class Day01 {
 
     public static void main(String[] args) throws IOException {
 
-        List<String> records = new ArrayList<>();
-
-        try (Scanner scanner = new Scanner(new File("src/day01/input01.txt"))) {
-//        try (Scanner scanner = new Scanner(new File("src/day01/testInput01.txt"))) {
-            while (scanner.hasNextLine()) {
-                records.add(scanner.next());
-            }
-        }
+        List<String> records = parseFile("01" , false);
 
         part1(records);
         part2(records);
 
     }
+
+
 
     private static void part1(List<String> records) {
         int previousDepth = 0;
