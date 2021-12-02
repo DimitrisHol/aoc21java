@@ -14,7 +14,7 @@ public class FileManager {
         String fileName = calculateFileName(day, isTestInput);
         try (Scanner scanner = new Scanner(new File(fileName))) {
             while (scanner.hasNextLine()) {
-                records.add(scanner.next());
+                records.add(scanner.nextLine());
             }
         }
         return records;
